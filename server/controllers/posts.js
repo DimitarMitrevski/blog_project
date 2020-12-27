@@ -49,9 +49,9 @@ export const updatePost = async (req, res) => {
 
     const updatedPost = { creator, title, message, tags, selectedFile, _id: id};
 
-    const updatedPost1 = await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });
+    const getUpdatedPostFromDb = await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });
 
-    res.json(updatedPost1);
+    res.json(getUpdatedPostFromDb);
 }
 
 export const deletePost = async (req, res) => {
