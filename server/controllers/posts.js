@@ -53,7 +53,7 @@ export const updatePost = async (req, res) => {
 
     res.json(getUpdatedPostFromDb);
 }
-
+ 
 export const deletePost = async (req, res) => {
     const { id } = req.params;
 
